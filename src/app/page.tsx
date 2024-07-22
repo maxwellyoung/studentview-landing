@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import TwitterIcon from "../components/TwitterIcon";
+import Image from "next/image";
+import favicon from "../../public/favicon.svg"; // Update the path as needed
 
 const LandingPage = () => {
   useEffect(() => {
@@ -37,7 +39,15 @@ const LandingPage = () => {
     <div className="min-h-screen bg-white text-black">
       <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-white">
         <div className="container mx-auto p-6 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-green-500">StudentView</h1>
+          <div className="flex items-center space-x-3">
+            <Image
+              src={favicon}
+              alt="StudentView Logo"
+              width={40}
+              height={40}
+            />
+            <h1 className="text-3xl font-bold text-green-500">StudentView</h1>
+          </div>
           <nav className="flex items-center space-x-6">
             <a
               href="#features"
