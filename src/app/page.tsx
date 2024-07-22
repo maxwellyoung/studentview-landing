@@ -99,7 +99,7 @@ const LandingPage = () => {
       <section id="ios-app" className="py-32 bg-gray-900 text-white">
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-500">
-            Web and iOS Apps Coming Soon!
+            Web and iOS apps coming soon!
           </h3>
           <p className="text-xl md:text-2xl mb-12 text-gray-300">
             Get ready to take StudentView with you, wherever you go. Stay tuned
