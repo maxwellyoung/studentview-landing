@@ -51,12 +51,12 @@ const LandingPage = () => {
             >
               Stay Updated
             </a>
-            <a
+            {/* <a
               href="https://twitter.com/yourprofile"
               className="flex items-center justify-center hover:text-gray-300"
             >
               <TwitterIcon />
-            </a>
+            </a> */}
           </nav>
         </div>
       </header>
@@ -144,14 +144,14 @@ const LandingPage = () => {
       </section>
 
       <footer className="py-8 bg-gray-900 text-gray-400 text-center">
-        <div className="flex justify-center space-x-6 mb-4">
+        {/* <div className="flex justify-center space-x-6 mb-4">
           <a
-            href="https://twitter.com/yourprofile"
+            href="https://x.com/ninetyninedigi"
             className="hover:text-gray-300"
           >
             <TwitterIcon />
           </a>
-        </div>
+        </div> */}
         <p>© 2024 StudentView. All rights reserved.</p>
         <p>
           Designed by{" "}
