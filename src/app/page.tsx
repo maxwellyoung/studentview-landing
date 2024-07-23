@@ -1,11 +1,12 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import TwitterIcon from "../components/TwitterIcon";
 import Image from "next/image";
 import favicon from "../../public/favicon.svg"; // Update the path as needed
 
 const LandingPage = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector("header");
@@ -48,7 +49,7 @@ const LandingPage = () => {
             />
             <h1 className="text-3xl font-bold text-green-500">StudentView</h1>
           </div>
-          <nav className="flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6">
             <a
               href="#features"
               className="text-lg hover:text-green-400 text-green-500 transition-colors duration-300"
@@ -61,14 +62,45 @@ const LandingPage = () => {
             >
               Stay Updated
             </a>
-            {/* <a
-              href="https://twitter.com/yourprofile"
-              className="flex items-center justify-center hover:text-gray-300"
-            >
-              <TwitterIcon />
-            </a> */}
           </nav>
+          <button
+            className="md:hidden text-green-500"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white shadow-md">
+            <a
+              href="#features"
+              className="block px-4 py-2 text-lg text-green-500 hover:bg-green-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#stay-updated"
+              className="block px-4 py-2 text-lg text-green-500 hover:bg-green-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Stay Updated
+            </a>
+          </div>
+        )}
       </header>
 
       <main className="flex flex-col items-center justify-center text-center px-4 py-40 min-h-screen">
@@ -154,14 +186,6 @@ const LandingPage = () => {
       </section>
 
       <footer className="py-8 bg-gray-900 text-gray-400 text-center">
-        {/* <div className="flex justify-center space-x-6 mb-4">
-          <a
-            href="https://x.com/ninetyninedigi"
-            className="hover:text-gray-300"
-          >
-            <TwitterIcon />
-          </a>
-        </div> */}
         <p>© 2024 StudentView. All rights reserved.</p>
         <p>
           Designed by{" "}
