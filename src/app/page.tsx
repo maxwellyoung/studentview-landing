@@ -104,7 +104,7 @@ const LandingPage = () => {
       </header>
 
       <main className="flex flex-col items-center justify-center text-center px-4 py-40 min-h-screen ">
-        <h2 className="text-7xl md:text-9xl font-extrabold mb-6 leading-tight text-green-500 text-balance">
+        <h2 className="text-7xl md:text-9xl font-extrabold mb-6 leading-tight text-green-500 text-balance ">
           Study{" "}
           <mark className="bg-transparent font-extrabold text-green-500 shadow-[inset_0_-0.5em_0_0_#B8F3FF]">
             Smart
