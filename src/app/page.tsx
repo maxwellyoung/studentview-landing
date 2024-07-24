@@ -37,8 +37,8 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-black">
-      <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-white">
+    <div className="min-h-screen bg-orange-50 text-black">
+      <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-orange-50 backdrop-blur-md bg-opacity-50">
         <div className="container mx-auto p-6 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <Image
@@ -84,7 +84,7 @@ const LandingPage = () => {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white shadow-md">
+          <div className="md:hidden bg-orange-50 shadow-md">
             <a
               href="#features"
               className="block px-4 py-2 text-lg text-green-500 hover:bg-green-100"
@@ -103,9 +103,13 @@ const LandingPage = () => {
         )}
       </header>
 
-      <main className="flex flex-col items-center justify-center text-center px-4 py-40 min-h-screen">
+      <main className="flex flex-col items-center justify-center text-center px-4 py-40 min-h-screen ">
         <h2 className="text-7xl md:text-9xl font-extrabold mb-6 leading-tight text-green-500 text-balance">
-          Study Smart,
+          Study{" "}
+          <mark className="bg-transparent font-extrabold text-green-500 shadow-[inset_0_-0.5em_0_0_#B8F3FF]">
+            Smart
+          </mark>
+          ,
           <br />
           Live Better.
         </h2>
@@ -120,10 +124,10 @@ const LandingPage = () => {
         </a>
       </main>
 
-      <section id="features" className="py-32 bg-gray-100 text-gray-800">
+      <section id="features" className="py-32  text-gray-800">
         <div className="container mx-auto text-center">
-          <h3 className="text-5xl md:text-6xl font-bold mb-16 text-green-500">
-            Features
+          <h3 className="text-5xl md:text-6xl font-bold mb-16 text-green-500 text-balance">
+            Ease your life with
           </h3>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="w-full md:w-1/3 p-8">
@@ -160,7 +164,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="ios-app" className="py-32 bg-gray-50 text-gray-900">
+      <section id="ios-app" className="py-32  text-gray-900">
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-500">
             Web and iOS apps coming soon!
@@ -172,7 +176,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="stay-updated" className="py-32 bg-white text-gray-800">
+      <section id="stay-updated" className="py-32  text-gray-800">
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-500">
             Stay Updated!
@@ -185,7 +189,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-gray-900 text-gray-400 text-center">
+      <footer className="py-8 text-gray-400 text-center">
         <p>© 2024 StudentView. All rights reserved.</p>
         <p>
           Designed by{" "}
