@@ -47,7 +47,9 @@ const LandingPage = () => {
               width={40}
               height={40}
             />
-            <h1 className="text-3xl font-bold text-green-500">StudentView</h1>
+            <h1 className="text-3xl font-medium tracking-tighter text-green-500">
+              StudentView
+            </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <a
