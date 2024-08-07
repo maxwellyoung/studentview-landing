@@ -37,7 +37,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 text-gray-800">
+    <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 text-gray-800 font-sf-rounded">
       <header className="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-opacity-70 shadow-sm">
         <div className="container mx-auto p-6 flex justify-between items-center">
           <div className="flex items-center space-x-3">
