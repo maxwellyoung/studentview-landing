@@ -118,23 +118,23 @@ const LandingPage = () => {
           The ultimate tool to manage your studies and well-being.
         </p>
         <a
-          href="#stay-updated"
+          href="https://dashboard.studentview.app"
           className="bg-green-600 text-white py-4 px-12 rounded-full text-xl font-semibold shadow-lg transition-transform transform hover:scale-105"
         >
-          Stay Updated
+          Go to Dashboard
         </a>
       </main>
 
-      <section id="features" className="py-32 bg-white text-gray-800">
+      <section id="features" className="section py-32 bg-white text-gray-800">
         <div className="container mx-auto text-center">
           <h3 className="text-5xl md:text-6xl font-bold mb-16 text-green-600">
-            Ease your life with
+            📚 Ease your life with
           </h3>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="w-full md:w-1/3 p-8">
               <div className="p-10 h-full rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="text-3xl font-semibold mb-4 text-green-600">
-                  Study Notes
+                  📝 Study Notes
                 </h4>
                 <p className="text-lg">
                   Keep all your study notes in one organized place.
@@ -144,7 +144,7 @@ const LandingPage = () => {
             <div className="w-full md:w-1/3 p-8">
               <div className="p-10 h-full rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="text-3xl font-semibold mb-4 text-green-600">
-                  Meditation
+                  🧘 Meditation
                 </h4>
                 <p className="text-lg">
                   Take a break, meditate, and boost your focus.
@@ -154,7 +154,7 @@ const LandingPage = () => {
             <div className="w-full md:w-1/3 p-8">
               <div className="p-10 h-full rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="text-3xl font-semibold mb-4 text-green-600">
-                  Task Management
+                  📅 Task Management
                 </h4>
                 <p className="text-lg">
                   Organize your tasks and manage your time effectively.
@@ -167,11 +167,11 @@ const LandingPage = () => {
 
       <section
         id="ios-app"
-        className="py-32 bg-gradient-to-b from-green-50 to-white text-gray-900"
+        className="section py-32 bg-gradient-to-b from-green-50 to-white text-gray-900"
       >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            Web and iOS apps coming soon!
+            🌟 Web and iOS apps coming soon!
           </h3>
           <p className="text-xl md:text-2xl mb-12 text-gray-700">
             Get ready to take StudentView with you, wherever you go. Stay tuned
@@ -182,11 +182,11 @@ const LandingPage = () => {
 
       <section
         id="faqs"
-        className="py-32 bg-gradient-to-b from-white to-green-50 text-gray-800"
+        className="section py-32 bg-gradient-to-b from-white to-green-50 text-gray-800"
       >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            FAQs
+            ❓ FAQs
           </h3>
           <div className="text-left max-w-3xl mx-auto">
             <div className="mb-4">
@@ -225,20 +225,31 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section id="call-to-action" className="py-32 bg-green-50 text-gray-800">
+
+      <section
+        id="call-to-action"
+        className="section py-32 bg-green-50 text-gray-800"
+      >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            Ready to transform your student life?
+            🚀 Ready to transform your student life?
           </h3>
-
-          <div id="email-octopus-form" className="flex justify-center "></div>
+          <a
+            href="https://dashboard.studentview.app"
+            className="bg-green-600 text-white py-4 px-12 rounded-full text-xl font-semibold shadow-lg transition-transform transform hover:scale-105"
+          >
+            Get Started
+          </a>
         </div>
       </section>
 
-      <section id="founder-note" className="py-32 bg-white text-gray-800">
+      <section
+        id="founder-note"
+        className="section py-32 bg-white text-gray-800"
+      >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            A Note from Our Founder
+            💬 A Note from Our Founder
           </h3>
           <p className="text-xl md:text-2xl mb-12 text-gray-700">
             &quot;As a student, I faced numerous challenges in managing my

@@ -46,7 +46,7 @@ export default function RootLayout({
         />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`font-sf-rounded`}>{children}</body>
     </html>
   );
 }

@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        "sf-rounded": ['"SF Rounded"', "Inter", "sans-serif"],
+      },
       colors: {
         "gray-100": "#f7fafc",
         "gray-200": "#edf2f7",

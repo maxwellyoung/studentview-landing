@@ -48,3 +48,29 @@
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.05"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(#grain)" /></svg>');
   z-index: 0;
 }
+
+.section {
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: #f8fafc; /* Adjust the color as needed */
+  clip-path: ellipse(100% 50% at 50% 0%); /* Creates the curved effect */
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: #f8fafc; /* Adjust the color as needed */
+  clip-path: ellipse(100% 50% at 50% 100%); /* Creates the curved effect */
+}
