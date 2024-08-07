@@ -38,7 +38,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 text-gray-800">
-      <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-green-50 backdrop-blur-md bg-opacity-70 shadow-sm">
+      <header className="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-opacity-70 shadow-sm">
         <div className="container mx-auto p-6 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <Image
@@ -69,20 +69,37 @@ const LandingPage = () => {
             className="md:hidden text-green-600"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
+            {isMobileMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            )}
           </button>
         </div>
         {isMobileMenuOpen && (
@@ -118,23 +135,23 @@ const LandingPage = () => {
           The ultimate tool to manage your studies and well-being.
         </p>
         <a
-          href="https://dashboard.studentview.app"
+          href="#stay-updated"
           className="bg-green-600 text-white py-4 px-12 rounded-full text-xl font-semibold shadow-lg transition-transform transform hover:scale-105"
         >
-          Go to Dashboard
+          Stay Updated
         </a>
       </main>
 
-      <section id="features" className="section py-32 bg-white text-gray-800">
+      <section id="features" className="py-32 bg-white text-gray-800">
         <div className="container mx-auto text-center">
           <h3 className="text-5xl md:text-6xl font-bold mb-16 text-green-600">
-            📚 Ease your life with
+            Ease your life with
           </h3>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="w-full md:w-1/3 p-8">
               <div className="p-10 h-full rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="text-3xl font-semibold mb-4 text-green-600">
-                  📝 Study Notes
+                  Study Notes
                 </h4>
                 <p className="text-lg">
                   Keep all your study notes in one organized place.
@@ -144,7 +161,7 @@ const LandingPage = () => {
             <div className="w-full md:w-1/3 p-8">
               <div className="p-10 h-full rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="text-3xl font-semibold mb-4 text-green-600">
-                  🧘 Meditation
+                  Meditation
                 </h4>
                 <p className="text-lg">
                   Take a break, meditate, and boost your focus.
@@ -154,7 +171,7 @@ const LandingPage = () => {
             <div className="w-full md:w-1/3 p-8">
               <div className="p-10 h-full rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="text-3xl font-semibold mb-4 text-green-600">
-                  📅 Task Management
+                  Task Management
                 </h4>
                 <p className="text-lg">
                   Organize your tasks and manage your time effectively.
@@ -166,12 +183,12 @@ const LandingPage = () => {
       </section>
 
       <section
-        id="ios-app"
-        className="section py-32 bg-gradient-to-b from-green-50 to-white text-gray-900"
+        id="apps"
+        className="py-32 bg-gradient-to-b from-white to-green-50 text-gray-900"
       >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            🌟 Web and iOS apps coming soon!
+            Web and iOS apps coming soon!
           </h3>
           <p className="text-xl md:text-2xl mb-12 text-gray-700">
             Get ready to take StudentView with you, wherever you go. Stay tuned
@@ -182,11 +199,11 @@ const LandingPage = () => {
 
       <section
         id="faqs"
-        className="section py-32 bg-gradient-to-b from-white to-green-50 text-gray-800"
+        className="py-32 bg-gradient-to-b from-green-50 to-white text-gray-800"
       >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            ❓ FAQs
+            FAQs
           </h3>
           <div className="text-left max-w-3xl mx-auto">
             <div className="mb-4">
@@ -226,39 +243,31 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section
-        id="call-to-action"
-        className="section py-32 bg-green-50 text-gray-800"
-      >
+      <section id="stay-updated" className="py-32 bg-white text-gray-800">
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            🚀 Ready to transform your student life?
+            Ready to transform your student life?
           </h3>
-          <a
-            href="https://dashboard.studentview.app"
-            className="bg-green-600 text-white py-4 px-12 rounded-full text-xl font-semibold shadow-lg transition-transform transform hover:scale-105"
-          >
-            Get Started
-          </a>
+          <div id="email-octopus-form" className="flex justify-center "></div>
         </div>
       </section>
 
       <section
         id="founder-note"
-        className="section py-32 bg-white text-gray-800"
+        className="py-32 bg-gradient-to-b from-green-50 to-white text-gray-800"
       >
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
-            💬 A Note from Our Founder
+            A Note from Our Founder
           </h3>
           <p className="text-xl md:text-2xl mb-12 text-gray-700">
-            &quot;As a student, I faced numerous challenges in managing my
-            tasks, and well-being. That&apos;s why I created StudentView, an app
+            &ldquo;As a student, I faced numerous challenges in managing my
+            tasks and well-being. That&apos;s why I created StudentView, an app
             that brings everything together in one place to help you live a more
-            organized and stress-free student life.&quot;
+            organized and stress-free student life.&rdquo;
           </p>
           <p className="text-lg text-gray-800">
-            - Maxwell Young, Founder & CEO
+            - Maxwell Young, Founder &amp; CEO
           </p>
         </div>
       </section>

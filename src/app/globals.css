@@ -14,63 +14,62 @@
   }
 }
 
-.bg-animated-gradient {
-  background: linear-gradient(270deg, #e2e8f0, #edf2f7, #f7fafc);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+/* globals.css */
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0fff4;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.bg-animated-gradient {
-  background: linear-gradient(270deg, #e2e8f0, #edf2f7, #f7fafc);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-.grain {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.05"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(#grain)" /></svg>');
-  z-index: 0;
+.header {
+  background: linear-gradient(135deg, #e0f7e9 0%, #f0fff4 100%);
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 .section {
-  position: relative;
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px; /* Adjust the height as needed */
-  background: #f8fafc; /* Adjust the color as needed */
-  clip-path: ellipse(100% 50% at 50% 0%); /* Creates the curved effect */
+.curve {
+  margin-bottom: -1px;
 }
 
-.section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.curve svg {
+  display: block;
   width: 100%;
-  height: 50px; /* Adjust the height as needed */
-  background: #f8fafc; /* Adjust the color as needed */
-  clip-path: ellipse(100% 50% at 50% 100%); /* Creates the curved effect */
+  height: 3rem;
+}
+
+.shadow-box {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.shadow-box:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.glow-text {
+  color: #ff5252;
+  text-shadow: 0 0 10px rgba(255, 82, 82, 0.7), 0 0 20px rgba(255, 82, 82, 0.7);
+}
+
+.btn {
+  background-color: #ff5252;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ff1744;
+  transform: translateY(-2px);
 }
