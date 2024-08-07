@@ -261,9 +261,9 @@ const LandingPage = () => {
             A Note from Our Founder
           </h3>
           <p className="text-xl md:text-2xl mb-12 text-gray-700">
-            &ldquo;As a student, I faced numerous challenges in managing my
-            tasks and well-being. That&apos;s why I created StudentView, an app
-            that brings everything together in one place to help you live a more
+            &ldquo;As a student, I face numerous challenges in managing my tasks
+            and well-being. That&apos;s why I created StudentView, an app that
+            brings everything together in one place to help you live a more
             organized and stress-free student life.&rdquo;
           </p>
           <p className="text-lg text-gray-800">
