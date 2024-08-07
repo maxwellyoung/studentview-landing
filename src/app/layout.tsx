@@ -30,7 +30,7 @@ export default function RootLayout({
           property="og:description"
           content="Companion app for managing student life developed by ninetynine digital."
         />
-        <meta property="og:image" content="./public/preview.jpeg" />
+        <meta property="og:image" content="/preview.jpeg" />
         <meta property="og:url" content="https://studentview.app" />
         <meta property="og:type" content="website" />
 

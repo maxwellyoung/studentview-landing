@@ -37,8 +37,8 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-orange-50 to-yellow-50 text-gray-800">
-      <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-orange-50 backdrop-blur-md bg-opacity-70 shadow-sm">
+    <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 text-gray-800">
+      <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-green-50 backdrop-blur-md bg-opacity-70 shadow-sm">
         <div className="container mx-auto p-6 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <Image
@@ -86,7 +86,7 @@ const LandingPage = () => {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-orange-50 shadow-md">
+          <div className="md:hidden bg-green-50 shadow-md">
             <a
               href="#features"
               className="block px-4 py-2 text-lg text-green-600 hover:bg-green-100"
@@ -105,7 +105,7 @@ const LandingPage = () => {
         )}
       </header>
 
-      <main className="flex flex-col items-center justify-center text-center px-4 py-40 min-h-screen bg-gradient-to-b from-orange-50 to-yellow-50">
+      <main className="flex flex-col items-center justify-center text-center px-4 py-40 min-h-screen bg-gradient-to-b from-green-50 to-green-100">
         <h2 className="text-7xl md:text-9xl font-extrabold mb-6 leading-tight text-green-600 tracking-tight">
           Study{" "}
           <mark className="bg-transparent font-extrabold text-green-600 shadow-[inset_0_-0.5em_0_0_#B8F3FF]">
@@ -225,7 +225,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
       <section id="call-to-action" className="py-32 bg-green-50 text-gray-800">
         <div className="container mx-auto text-center">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 text-green-600">
@@ -253,7 +252,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-gray-900 text-gray-400 text-center">
+      <footer className="py-8 bg-white text-gray-400 text-center">
         <p>© 2024 StudentView. All rights reserved.</p>
         <p>
           Designed by{" "}
