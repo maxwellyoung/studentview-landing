@@ -87,3 +87,61 @@ body {
   background-color: #ff1744;
   transform: translateY(-2px);
 }
+
+.bg-gradient-animated {
+  background: linear-gradient(
+    135deg,
+    rgba(238, 174, 202, 0.5),
+    rgba(148, 187, 233, 0.5)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-animated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  filter: brightness(0.9);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-gradient-animated {
+  background: linear-gradient(
+    135deg,
+    rgba(238, 174, 202, 0.5),
+    rgba(148, 187, 233, 0.5)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-animated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  filter: brightness(0.9);
+  z-index: 1;
+  pointer-events: none;
+}
