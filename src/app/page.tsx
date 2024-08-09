@@ -1,8 +1,10 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import logo from "../../public/logo.png";
 
 const LandingPage = () => {
@@ -58,6 +60,25 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-50 to-green-100 text-gray-800 font-sf-rounded">
+      {/* Google Tag Manager */}
+      <Script
+        id="google-tag-manager"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5KFWBKDN');
+          `,
+        }}
+      />
+
       <header className="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-opacity-70 shadow-sm">
         <div className="container mx-auto p-6 flex justify-between items-center">
           <div className="flex items-center space-x-3">
@@ -67,15 +88,15 @@ const LandingPage = () => {
             </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#features" legacyBehavior>
-              <a className="text-lg hover:text-green-400 text-green-600 transition-colors duration-300">
+            <Link href="#features">
+              <span className="text-lg hover:text-green-400 text-green-600 transition-colors duration-300">
                 Features
-              </a>
+              </span>
             </Link>
-            <Link href="#stay-updated" legacyBehavior>
-              <a className="text-lg hover:text-green-400 text-green-600 transition-colors duration-300">
+            <Link href="#stay-updated">
+              <span className="text-lg hover:text-green-400 text-green-600 transition-colors duration-300">
                 Stay Updated
-              </a>
+              </span>
             </Link>
           </nav>
           <button
@@ -117,21 +138,21 @@ const LandingPage = () => {
         </div>
         {isMobileMenuOpen && (
           <div className="md:hidden bg-green-50 shadow-md">
-            <Link href="#features" legacyBehavior>
-              <a
+            <Link href="#features">
+              <span
                 className="block px-4 py-2 text-lg text-green-600 hover:bg-green-100"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Features
-              </a>
+              </span>
             </Link>
-            <Link href="#stay-updated" legacyBehavior>
-              <a
+            <Link href="#stay-updated">
+              <span
                 className="block px-4 py-2 text-lg text-green-600 hover:bg-green-100"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Stay Updated
-              </a>
+              </span>
             </Link>
           </div>
         )}
@@ -392,12 +413,38 @@ const LandingPage = () => {
         <p>© 2024 StudentView. All rights reserved.</p>
         <p>
           Designed by{" "}
-          <Link href="https://ninetynine.digital" legacyBehavior>
-            <a className="underline hover:text-gray-300 transition-colors duration-300">
+          <Link href="https://ninetynine.digital">
+            <span className="underline hover:text-gray-300 transition-colors duration-300">
               ninetynine digital
-            </a>
+            </span>
           </Link>
         </p>
+        <div className="flex justify-center mt-4 space-x-4">
+          <Link href="https://instagram.com/ninetynine_digital">
+            <span className="text-gray-400 hover:text-gray-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path d="M7.75 2h8.5C19.65 2 22 4.35 22 7.75v8.5C22 19.65 19.65 22 16.25 22h-8.5C4.35 22 2 19.65 2 16.25v-8.5C2 4.35 4.35 2 7.75 2zM4 7.75v8.5c0 2.07 1.68 3.75 3.75 3.75h8.5c2.07 0 3.75-1.68 3.75-3.75v-8.5c0-2.07-1.68-3.75-3.75-3.75h-8.5C5.68 4 4 5.68 4 7.75zm8 1.25c1.79 0 3.25 1.46 3.25 3.25s-1.46 3.25-3.25 3.25S8.75 13.79 8.75 12 10.21 9 12 9zm0-1.5a4.75 4.75 0 100 9.5 4.75 4.75 0 000-9.5zm6-1.5a.75.75 0 01-.75.75H17a.75.75 0 010-1.5h.25a.75.75 0 01.75.75z" />
+              </svg>
+            </span>
+          </Link>
+          <Link href="https://twitter.com/ninetyninedigi">
+            <span className="text-gray-400 hover:text-gray-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path d="M19.633 7.997c.013.17.013.34.013.51 0 5.21-3.963 11.212-11.213 11.212-2.226 0-4.29-.646-6.03-1.758a7.963 7.963 0 005.85-1.637 3.967 3.967 0 01-3.7-2.746c.597.09 1.13.09 1.728-.068a3.962 3.962 0 01-3.175-3.883c.525.297 1.092.475 1.71.508a3.957 3.957 0 01-1.231-5.28 11.237 11.237 0 008.15 4.137 3.96 3.96 0 016.749-3.606 7.884 7.884 0 002.514-.962 3.97 3.97 0 01-1.742 2.184 7.9 7.9 0 002.281-.623 8.45 8.45 0 01-1.984 2.064z" />
+              </svg>
+            </span>
+          </Link>
+        </div>
       </footer>
     </div>
   );
